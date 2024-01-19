@@ -1,0 +1,15 @@
+version: 1.0
+runtime: nodejs18   
+
+build:
+  commands:
+    pre-build:
+      - nvm install v14.18.1
+      - npm install
+    build:
+      - npm run-script build --no-minify
+
+run:  
+  command: npm start
+  network:
+    port: 3000
