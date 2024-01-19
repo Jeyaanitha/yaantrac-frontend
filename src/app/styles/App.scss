@@ -1,0 +1,289 @@
+// import & style for all components
+@import './Variables.scss';
+
+// remove in-built styles
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// application styles
+body {
+  background-color: $white;
+  font-family: 'Montserrat' !important;
+  overflow: hidden;
+  height: 100vh;
+
+  h1 {
+    font-size: $h1-size !important;
+  }
+
+  h2 {
+    font-size: $h2-size !important;
+  }
+
+  h3 {
+    font-size: $h3-size !important;
+  }
+
+  h4 {
+    font-size: $h4-size !important;
+  }
+
+  h5 {
+    font-size: $h5-size !important;
+  }
+
+  h6 {
+    font-size: $h6-size !important;
+  }
+
+  .primary {
+    color: $primary;
+  }
+
+  .secondary {
+    color: $secondary;
+  }
+
+  .blue-color {
+    background-color: $blue;
+  }
+
+  .blue-primary {
+    background-color: $primary;
+  }
+
+  .white-color {
+    color: $white;
+  }
+
+  .black-color {
+    color: $black;
+  }
+
+  .dark-blue {
+    color: $dark-blue;
+  }
+
+  .fab {
+    background-color: $primary !important;
+    color: $white !important;
+    width: '35px !important';
+    height: '35px !important';
+    :hover {
+      background-color: $primary !important;
+      color: $white !important;
+    }
+  }
+}
+
+// styles for loader
+.loader {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .logo {
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    10% {
+      -webkit-transform: rotate(10deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $primary;
+  border-radius: 10px;
+  width: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: inset 0 0 5px $primary;
+}
+
+//Floating effect
+.floating {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+//hover effect
+.up {
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
+}
+
+.up:hover {
+  top: -10px;
+}
+
+.static {
+  position: absolute;
+  background: $white;
+}
+
+.static:hover {
+  opacity: 0;
+}
+
+//select outline color change
+.MuiOutlinedInput-notchedOutline {
+  border-width: 1.5px !important;
+  border-color: $primary !important;
+  border-radius: 10px !important;
+}
+
+.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: $primary !important;
+}
+
+.MuiSelect-icon {
+  color: $primary !important;
+}
+
+.MuiSwitch-track {
+  height: 21px !important;
+  margin-top: -3px !important;
+  width: 43px !important;
+  margin-left: -4px;
+  border-radius: 10px !important;
+  background-color: $white !important;
+  border: 1px solid $primary;
+  opacity: 1 !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+}
+
+.MuiSwitch-thumb {
+  border: 1px solid $primary;
+}
+
+.Mui-checked {
+  color: $primary !important;
+}
+
+//dialog background box remover
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+  box-shadow: none !important;
+  border-radius: 10px !important;
+}
+
+.MuiButton-startIcon {
+  margin-left: 2px !important;
+  margin-right: 6px !important;
+}
+
+//hr for popup
+hr.solid {
+  border: 1px solid $primary;
+}
+
+.MuiTablePagination-displayedRows {
+  margin: 0 !important;
+}
+
+// Underline CSS for FAQ
+.underlineFaqList {
+  padding-bottom: 4px;
+  position: relative;
+  text-decoration: none;
+}
+
+.underlineFaqList::after {
+  background: $primary;
+  background: linear-gradient(to right, transparent 0%, $primary 50%, transparent 100%);
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  border-radius: 5px 8px;
+}
+
+.gm-style-iw-t {
+  bottom: 50px !important;
+}
+
+.MuiPickersToolbar-penIconButton {
+  display: none !important;
+}
+
+// Common Styles for all Components:
+#business-objective {
+  .icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .MuiAvatar-img {
+      object-fit: contain !important;
+    }
+  }
+  .objective-logo {
+    background-color: #d9d9d9;
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+  }
+  .main-title {
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+.highcharts-credits {
+  display: none !important;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500,500,100);
+
+.listItemButton {
+  color: #fff !important;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: none !important;
+  font-size: 12px !important;
+  justify-content: flex-start !important;
+}

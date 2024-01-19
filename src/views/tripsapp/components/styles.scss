@@ -1,0 +1,35 @@
+.customKhubstyle {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 10px;
+    width: 5px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #999;
+  }
+
+  //select outline color change
+  .MuiOutlinedInput-notchedOutline {
+    border-width: 1px !important;
+    border-color: #e8eef2 !important;
+    border-radius: 6px !important;
+  }
+
+  .Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #3239ea !important;
+  }
+}
